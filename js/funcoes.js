@@ -2,16 +2,19 @@ const enderecoTipo = "http://localhost/numerapub/Api/Gravartipos.php";
 const listagemTipo = "http://localhost/numerapub/Api/Buscartipos.php";
 
 
-nomes = [];
 
 //************************************************************************************ */
-function calcquadrado(){
+window.onload = function(){
 
-   const numero = document.getElementById('tipo');
+    nomes = [];
 
-   const resultado = quadrado(numero.value);
+    const menulogar = document.getElementById('logar');
 
-   console.log(resultado); 
+    menulogar.addEventListener('click', function(e){
+
+             alert("pressionou o login");
+
+    });
 
 };
 
