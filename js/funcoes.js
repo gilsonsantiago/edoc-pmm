@@ -2,10 +2,7 @@ const enderecoTipo = "http://localhost/numerapub/Api/Gravartipos.php";
 const listagemTipo = "http://localhost/numerapub/Api/Buscartipos.php";
 
 
-
 nomes = [];
-
-
 
 //************************************************************************************ */
 function calcquadrado(){
