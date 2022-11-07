@@ -1,7 +1,7 @@
 const enderecoTipo = "http://localhost/numerapub/Api/Gravartipos.php";
 const listagemTipo = "http://localhost/numerapub/Api/Buscartipos.php";
 
-const enderecotipoapi = "https://prefeituramontadas.000webhostapp.com/Api/Gravartipos.php";
+
 
 nomes = [];
 
