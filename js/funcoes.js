@@ -1,5 +1,5 @@
 
-//*********************************************************************************************** */
+//*********************************************************************/
 function gravartipo() {
 
 
@@ -14,18 +14,16 @@ function gravartipo() {
     'descricao': novadescricao.value
   };
 
-  nomes.push(tipos);
-  console.log(nomes);
-
   const options = {
     method: "POST",
     mode: "cors",
+    body: (JSON.stringify(tipos)),
     cache: "default",
     headers: {
       "Accept": "application/json",
       "Content-Type": "application/json; ",
-    },
-    body: (JSON.stringify(tipos)),
+    }
+    
   };
 
   /********************************************** */
@@ -43,7 +41,7 @@ function ler() {
 
   const listas = document.getElementById("detalhes");
  
-  /**************************************** */
+  /*****************************************/
   function teste(dados) {
 
     const div = document.createElement("div");
@@ -78,6 +76,8 @@ function ler() {
 
       });
 
+
+
     });
 
 };
@@ -85,6 +85,6 @@ function ler() {
 /******************************************** */
 function formataitem(item) {
 
-  return ((item < 10) ? '0' + item : item)
+  return ((item < 10) ? "0" + item : item)
 
 };

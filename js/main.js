@@ -51,11 +51,29 @@ window.onload = function () {
 
   menurelatorios.addEventListener('click', function (e) {
 
-    alert("pressionou o RELATORIOS");
+    const opcaorelatorios = document.getElementById('lista');
+    const detalhe         = document.getElementById('detalhes');
+
+    detalhe.innerHTML = '';
+
+    fetch('http://localhost/edoc-pmm/views/relatorios.html')
+    .then((resposta) => resposta.text())
+    .then(function(html) {
+
+        opcaorelatorios.innerHTML = html;
+       
+    })
+    .catch((err) => console.log(err));
 
   });
 
 };
+
+
+
+
+
+
 
 /*
  // Initialize the DOM parser
