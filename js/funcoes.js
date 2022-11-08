@@ -41,9 +41,8 @@ function gravartipo() {
 /******************************************************************* */
 function ler() {
 
-  const listas = document.getElementById("lista");
-
-
+  const listas = document.getElementById("detalhes");
+ 
   /**************************************** */
   function teste(dados) {
 
@@ -55,6 +54,8 @@ function ler() {
     li.innerText = formataitem(dados.tipo) + ' -  ' + dados.descricao;
 
     div.appendChild(li);
+
+    // listas.innerHTML = div;
 
     listas.appendChild(div);
 
@@ -73,7 +74,7 @@ function ler() {
 
       dados.map((dados) => {
 
-        teste(dados);
+           teste(dados);
 
       });
 

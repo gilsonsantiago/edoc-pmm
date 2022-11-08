@@ -1,20 +1,24 @@
+//*************************************************************************************/
+
 const enderecoTipo = "http://localhost/numerapub/Api/Gravartipos.php";
 const listagemTipo = "http://localhost/numerapub/Api/Buscartipos.php";
 
 
-
-//************************************************************************************ */
 window.onload = function () {
 
   const nomes = [];
 
-  const menulogar = document.getElementById('logar');
+  const menulogar      = document.getElementById('logar');
   const menudocumentos = document.getElementById('documentos');
   const menurelatorios = document.getElementById('relatorios');
 
   menulogar.addEventListener('click', function (e) {
 
      const opcaologar = document.getElementById('lista');
+     const detalhe    = document.getElementById('detalhes');
+
+     detalhe.innerHTML = '';
+
 
      fetch('http://localhost/edoc-pmm/views/home.html')
      .then((resposta) => resposta.text())
@@ -29,7 +33,19 @@ window.onload = function () {
 
   menudocumentos.addEventListener('click', function (e) {
 
-    alert("pressionou o DOCUMENTOS");
+    const opcaodocumentos = document.getElementById('lista');
+    const detalhe         = document.getElementById('detalhes');
+
+    detalhe.innerHTML = '';
+
+    fetch('http://localhost/edoc-pmm/views/tipos.html')
+    .then((resposta) => resposta.text())
+    .then(function(html) {
+
+        opcaodocumentos.innerHTML = html;
+       
+    })
+    .catch((err) => console.log(err));
 
   });
 
