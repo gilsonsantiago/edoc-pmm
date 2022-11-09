@@ -1,10 +1,21 @@
-//*************************************************************************************/
+/******************************************************************************
+ * Endereços URL da API
+ */
 
-const enderecoTipo = "http://localhost/numerapub/Api/Gravartipos.php";
-const listagemTipo = "http://localhost/numerapub/Api/Buscartipos.php";
+const enderecoTipo       = "http://localhost/numerapub/Api/Gravartipos.php";
+const listagemTipo       = "http://localhost/numerapub/Api/Buscartipos.php";
 
 
-window.onload = function () {
+/***********************************************************************
+* Endereços das Views 
+*/
+const enderecoHome       = "http://localhost/edoc-pmm/views/home.html";
+const enderecoTipos      = "http://localhost/edoc-pmm/views/tipos.html";
+const enderecoRelatorios = 'http://localhost/edoc-pmm/views/relatorios.html';
+
+
+
+window.onload = function(){
 
   const nomes = [];
 
@@ -12,67 +23,77 @@ window.onload = function () {
   const menudocumentos = document.getElementById('documentos');
   const menurelatorios = document.getElementById('relatorios');
 
-  menulogar.addEventListener('click', function (e) {
+  menulogar.addEventListener('click', menulogarcontrole);
 
-     const opcaologar = document.getElementById('lista');
-     const detalhe    = document.getElementById('detalhes');
+  menudocumentos.addEventListener('click', menudocumentoscontrole);
 
-     detalhe.innerHTML = '';
-
-
-     fetch('http://localhost/edoc-pmm/views/home.html')
-     .then((resposta) => resposta.text())
-     .then(function(html) {
-
-        opcaologar.innerHTML = html;
-
-     })
-     .catch((err) => console.log(err));
-
-  });
-
-  menudocumentos.addEventListener('click', function (e) {
-
-    const opcaodocumentos = document.getElementById('lista');
-    const detalhe         = document.getElementById('detalhes');
-
-    detalhe.innerHTML = '';
-
-    fetch('http://localhost/edoc-pmm/views/tipos.html')
-    .then((resposta) => resposta.text())
-    .then(function(html) {
-
-        opcaodocumentos.innerHTML = html;
-       
-    })
-    .catch((err) => console.log(err));
-
-  });
-
-  menurelatorios.addEventListener('click', function (e) {
-
-    const opcaorelatorios = document.getElementById('lista');
-    const detalhe         = document.getElementById('detalhes');
-
-    detalhe.innerHTML = '';
-
-    fetch('http://localhost/edoc-pmm/views/relatorios.html')
-    .then((resposta) => resposta.text())
-    .then(function(html) {
-
-        opcaorelatorios.innerHTML = html;
-       
-    })
-    .catch((err) => console.log(err));
-
-  });
+  menurelatorios.addEventListener('click', menurelatorioscontrole);
 
 };
 
 
 
 
+/****************************************** */
+function menulogarcontrole(e){
 
+  const opcaologar = document.getElementById('lista');
+  const detalhe    = document.getElementById('detalhes');
+
+  detalhe.innerHTML = '';
+
+
+  fetch(enderecoHome)
+  .then((resposta) => resposta.text())
+  .then(function(html) {
+
+     opcaologar.innerHTML = html;
+
+  })
+  .catch((err) => console.log(err));
+
+};
+
+
+
+/****************************************** */
+function menudocumentoscontrole(e){
+
+  const opcaodocumentos = document.getElementById('lista');
+  const detalhe         = document.getElementById('detalhes');
+
+  detalhe.innerHTML = '';
+
+  fetch(enderecoTipos)
+  .then((resposta) => resposta.text())
+  .then(function(html) {
+
+      opcaodocumentos.innerHTML = html;
+     
+  })
+  .catch((err) => console.log(err));
+
+};
+
+
+/************************************************** */
+function menurelatorioscontrole(e){
+
+  const opcaorelatorios = document.getElementById('lista');
+  const detalhe         = document.getElementById('detalhes');
+
+  detalhe.innerHTML = '';
+
+  fetch(enderecoRelatorios)
+  .then((resposta) => resposta.text())
+  .then(function(html) {
+
+      opcaorelatorios.innerHTML = html;
+     
+  })
+  .catch((err) => console.log(err));
+
+};
 
 
 /*

@@ -40,24 +40,6 @@ function gravartipo() {
 function ler() {
 
   const listas = document.getElementById("detalhes");
- 
-  /*****************************************/
-  function teste(dados) {
-
-    const div = document.createElement("div");
-    const li = document.createElement("li");
-
-    div.setAttribute("align", "justify");
-
-    li.innerText = formataitem(dados.tipo) + ' -  ' + dados.descricao;
-
-    div.appendChild(li);
-
-    // listas.innerHTML = div;
-
-    listas.appendChild(div);
-
-  }
 
   /********************************** */
   fetch(listagemTipo)
@@ -72,11 +54,11 @@ function ler() {
 
       dados.map((dados) => {
 
-           teste(dados);
+           adicionaritem(dados, listas);
 
       });
 
-
+      // Return o map -- FATORAR MAIS NA FRENTE
 
     });
 
@@ -85,6 +67,26 @@ function ler() {
 /******************************************** */
 function formataitem(item) {
 
-  return ((item < 10) ? "0" + item : item)
+  return ((item < 10) ? "0" + item : item);
 
 };
+
+
+
+ /*****************************************/
+ function adicionaritem(dados, listas) {
+
+    const div = document.createElement("div");
+    const li = document.createElement("li");
+
+    div.setAttribute("align", "justify");
+
+    li.innerText = formataitem(dados.tipo) + ' -  ' + dados.descricao;
+
+    div.appendChild(li);
+
+    // listas.innerHTML = div;
+
+    listas.appendChild(div);
+
+}
