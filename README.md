@@ -1,6 +1,7 @@
 # edoc-pmm
 Numeracao de documentos
 
+Este Projeto é a aplicação na prática do aprendizado como aluno no IFPB-2022.
 
 Este aplicativo tem como objetivo reescrever o código original escrito em PHP para controlar a criação e numeração de documentos públicos utilizado na Prefeitura Municipal de Montadas.
 
