@@ -2,11 +2,9 @@
 //*********************************************************************/
 function gravartipo() {
 
-
   const novoente = document.getElementById("ente");
   const novotipo = document.getElementById("tipo");
   const novadescricao = document.getElementById("descricao");
-
 
   tipos = {
     'ente': novoente.value,
@@ -22,18 +20,16 @@ function gravartipo() {
     headers: {
       "Accept": "application/json",
       "Content-Type": "application/json; ",
-    }
+    }};
     
+  
+    fetch (enderecoTipo, options)
+      .then(response => response.json())
+      .then(json => console.log(json))
+      .catch(err => console.log("erro... " + err));
+
   };
 
-  /********************************************** */
-  fetch(enderecoTipo, options)
-    .then(response => response.json())
-    .then(json => console.log(json))
-    .catch(err => console.log("erro... " + err));
-
-
-};
 
 
 /******************************************************************* */

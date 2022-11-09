@@ -15,14 +15,14 @@ const enderecoRelatorios = 'http://localhost/edoc-pmm/views/relatorios.html';
 
 
 
-window.onload = function(){
+window.onload = function(e){
 
   const nomes = [];
 
   const menulogar      = document.getElementById('logar');
   const menudocumentos = document.getElementById('documentos');
   const menurelatorios = document.getElementById('relatorios');
-
+ 
   menulogar.addEventListener('click', menulogarcontrole);
 
   menudocumentos.addEventListener('click', menudocumentoscontrole);
@@ -30,8 +30,6 @@ window.onload = function(){
   menurelatorios.addEventListener('click', menurelatorioscontrole);
 
 };
-
-
 
 
 /****************************************** */
