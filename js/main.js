@@ -2,9 +2,16 @@
  * Endereços URL da API
  */
 
+
+
 const enderecoTipo       = "http://localhost/numerapub/Api/Gravartipos.php";
 const listagemTipo       = "http://localhost/numerapub/Api/Buscartipos.php";
 
+
+/*
+const enderecoTipo       = "http://localhost/numerapub/Api/Gravartipos.php";
+const listagemTipo       = "http://localhost/numerapub/Api/Buscartipos.php";
+*/
 
 /***********************************************************************
 * Endereços das Views 
@@ -13,7 +20,12 @@ const enderecoHome       = "http://localhost/edoc-pmm/views/home.html";
 const enderecoTipos      = "http://localhost/edoc-pmm/views/tipos.html";
 const enderecoRelatorios = 'http://localhost/edoc-pmm/views/relatorios.html';
 
+/*
+const enderecoHome       = "http://localhost/edoc-pmm/views/home.html";
+const enderecoTipos      = "http://localhost/edoc-pmm/views/tipos.html";
+const enderecoRelatorios = 'http://localhost/edoc-pmm/views/relatorios.html';
 
+*/
 
 window.onload = function(e){
 

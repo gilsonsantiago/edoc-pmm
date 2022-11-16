@@ -35,8 +35,7 @@ function gravartipo() {
 /******************************************************************* */
 function ler() {
 
-  const listas = document.getElementById("detalhes");
-
+  
   /********************************** */
   fetch(listagemTipo)
 
@@ -48,11 +47,21 @@ function ler() {
 
     .then((dados) => {
 
-      dados.map((dados) => {
+       const listas = document.getElementById("detalhes");
+      
+       let novalista =  [];
 
-           adicionaritem(dados, listas);
+       novalista = dados.map((dados) => {
 
-      });
+               
+            return ('<li>' + formataitem(dados.tipo) + ' -  ' + dados.descricao + '</li>');
+
+           
+        });
+
+        novalista = '<ul>' + novalista + '</ul>';
+
+        listas.innerHTML = novalista;
 
       // Return o map -- FATORAR MAIS NA FRENTE
 
@@ -67,22 +76,3 @@ function formataitem(item) {
 
 };
 
-
-
- /*****************************************/
- function adicionaritem(dados, listas) {
-
-    const div = document.createElement("div");
-    const li = document.createElement("li");
-
-    div.setAttribute("align", "justify");
-
-    li.innerText = formataitem(dados.tipo) + ' -  ' + dados.descricao;
-
-    div.appendChild(li);
-
-    // listas.innerHTML = div;
-
-    listas.appendChild(div);
-
-}
