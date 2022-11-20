@@ -56,6 +56,8 @@ function ler() {
                
             return ('<li>' + formataitem(dados.tipo) + ' -  ' + dados.descricao + '</li>');
 
+            console.log(dados.tipo, dados.descricao);
+
            
         });
 
