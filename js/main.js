@@ -44,6 +44,13 @@ window.onload = function (e) {
 };
 
 
+
+/******************************************************************
+ *  todas as funcções abaixo serão refatorada para otimizar o código
+ */
+
+
+
 /****************************************** */
 function menulogarcontrole(e) {
 
@@ -63,6 +70,9 @@ function menulogarcontrole(e) {
     .catch((err) => console.log(err));
 
 };
+
+
+
 
 
 
