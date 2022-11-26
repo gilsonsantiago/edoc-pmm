@@ -1,44 +1,145 @@
 <div class="container">
 
-    <div style=" box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
+    <br>
+
+    <div class="card text-center" style=" box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
     -webkit-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
     -moz-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);">
-  
-        <br>
 
-        <div>
+        <div class="card-header">
 
-            <select id="listagementes" class="form-select" aria-label="Default select example">
-
-                <option selected>Open this select menu</option>
-
-                <option value="1">One</option>
-
-                <option value="2">Two</option>
-
-                <option value="3">Three</option>
-
-            </select>
+            <h2>Cadastro dos Tipos de Documentos - CTD</h2>
 
         </div>
 
+        <div class="card-body">
+
+            <h5 class="card-title">Tipos de Documentos</h5>
+
+            <form action="GravarUsuarios" method="post">
 
 
-        Ente: <input type="number" class="form-control" id="ente" name="ente">
+                <div class="row">
 
-        Tipo: <input type="number" class="form-control" id="tipo" name="tipo">
+                    <div class="col">
 
-        Nome: <input type="text" class="form-control" id="descricao" name="descricao">
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
 
-        <br>
+                    </div>
 
-        <button type="button"  class="btn btn-primary" onclick="gravartipo();">Gravar Tipo</button>
-    
-        <button type="button" class="btn btn-primary" onclick="ler();">Listagem de Tipos</button>
+                    <div class="col">
 
-        <hr>
+                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+
+                    </div>
+
+                </div>
+
+
+
+            
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+
+                        <label for="nome">Nome do Usuário</label>
+
+                        <input type="text" name="nome" id="nome" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                        <label for="usuario">Usuário</label>
+
+                        <input type="text" name="usuario" id="usuario" class="form-control"
+                            style="text-transform: uppercase" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group col-md-6">
+
+                        <label for="email">Email</label>
+
+                        <input type="email" name="email" id="email" class="form-control" required>
+
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+
+                        <label for="senha">Senha</label>
+
+                        <input type="password" name="senha" id="senha" class="form-control" required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+
+                        <label for="nivel">Tipo de usuário</label>
+
+                        <select class="custom-select" id="nivel" name="nivel" required>
+
+                            <option value="0">1 - Usuários</option>
+
+                            <option value="1">2 - Operador</option>
+
+                            <option value="2">3 - Supervisor</option>
+
+                            <option value="9">2 - Administrador</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+
+                        <label for="ativa">Situação do usuário</label>
+
+                        <select class="custom-select" id="ativa" name="ativa" required>
+
+                            <option value="0">1 - Inicial</option>
+
+                            <option value="1">2 - Ativo</option>
+
+                            <option value="2">2 - Desativado</option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit" name="cadastrarusers" id="cadastrarusers" class="btn btn-primary">Salvar</button>
+
+                <a href="Documentos" name="retornardoc" id="retornardoc" class="btn btn-primary"
+                    role="button">Retornar</a>
+
+
+            </form>
+
+
+        </div>
+
+        <div class="card-footer text-muted">
+
+            Uso exclusivo de Administradores
+
+        </div>
 
     </div>
 
-      
 </div>
