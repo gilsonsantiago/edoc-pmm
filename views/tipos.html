@@ -1,44 +1,48 @@
-<div class="container" style=" box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
--webkit-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
--moz-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);">
+<div class="container">
 
-    <div >
+    <div style=" box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: -4px 2px 38px 0px rgba(0,0,0,0.41);">
   
         <br>
 
         <div>
 
-            <select id="listagementes" class="form-select" aria-label="Default select example">
+                        <label for="ativa">Situação do usuário</label>
 
-                <option selected>Open this select menu</option>
+                        <select class="custom-select" id="ativa" name="ativa" required>
 
-                <option value="1">One</option>
+                            <option value="0">1 - Inicial</option>
 
-                <option value="2">Two</option>
+                            <option value="1">2 - Ativo</option>
 
-                <option value="3">Three</option>
+                            <option value="2">2 - Desativado</option>
 
-            </select>
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit" name="cadastrarusers" id="cadastrarusers" class="btn btn-primary">Salvar</button>
+
+                <a href="Documentos" name="retornardoc" id="retornardoc" class="btn btn-primary"
+                    role="button">Retornar</a>
+
+
+            </form>
+
 
         </div>
 
+        <div class="card-footer text-muted">
 
+            Uso exclusivo de Administradores
 
-        Ente: <input type="number" class="form-control" id="ente" name="ente">
-
-        Tipo: <input type="number" class="form-control" id="tipo" name="tipo">
-
-        Nome: <input type="text" class="form-control" id="descricao" name="descricao">
-
-        <br>
-
-        <button type="button"  class="btn btn-primary" onclick="gravartipo();">Gravar Tipo</button>
-    
-        <button type="button" class="btn btn-primary" onclick="ler();">Listagem de Tipos</button>
-
-        <hr>
+        </div>
 
     </div>
 
-      
 </div>

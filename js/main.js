@@ -133,7 +133,8 @@ function menudocumentoscontrole(e) {
     .then((resposta) => resposta.text())
     .then(function (html) {
 
-      opcaodocumentos.innerHTML = html;
+      
+      opcaodocumentos.innerHTML = html + listagem();
 
     })
     .catch((err) => console.log(err));
@@ -188,7 +189,7 @@ function menuusuarioscontrole(e) {
 
 
 /***********************************************************
- *  Uso futuro.
+ *  Uso futuro.   Uso no Acesso da API
  * 
         Initialize the DOM parser
         var parser = new DOMParser();
@@ -203,6 +204,8 @@ function menuusuarioscontrole(e) {
        // console.log(doc);
 
 
+       *****************************************************************************
+       Liberação de Origin na API.
 
        header("Access-Control-Allow-Origin: *");
        header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
@@ -210,12 +213,14 @@ function menuusuarioscontrole(e) {
        header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
        header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
-
+      **************************************************************************************
        Código .htaccess
 
       <IfModule mod_headers.c>
       Header set Access-Control-Allow-Origin "*"
       </IfModule>
+
+      **************************************************************
       Código para seu script PHP
 
       ?php
@@ -226,7 +231,7 @@ function menuusuarioscontrole(e) {
 
 
 
-
+      ************************************************************************
       Accept, Authorization, Content-Type
 
       header('Access-Control-Allow-Origin: http://dominio.com.br');

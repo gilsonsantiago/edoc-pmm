@@ -9,3 +9,10 @@ E um projeto com propositos de treinamento em adquirir novas habilidades na cria
 A exceção é nos estilos das páginas que optei em usar a Biblioteca Bootstrap 5.0.
 
 O mesmo usa um API escrita em PHP no Back-End cuja a finalidade é ser usada por Mobile em breve.
+
+**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+
+
+---
+
+## Edit a file
