@@ -53,10 +53,10 @@ function ler() {
 
        novalista = dados.map((dados) => {
 
-               
+         
             return ('<li>' + formataitem(dados.tipo) + ' -  ' + dados.descricao + '</li>');
 
-            console.log(dados.tipo, dados.descricao);
+            ///console.log(dados.tipo, dados.descricao);
 
            
         });
@@ -78,3 +78,8 @@ function formataitem(item) {
 
 };
 
+function teste(){
+
+    alert("isto é um teste novo");
+
+}
